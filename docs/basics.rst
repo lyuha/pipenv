@@ -435,7 +435,7 @@ doing a multi stage build for your application::
   # Tell pipenv to create venv in the current directory
   ENV PIPENV_VENV_IN_PROJECT=1
 
-  # Pipefile contains requests
+  # Pipfile contains requests
   ADD Pipfile.lock Pipfile /usr/src/
 
   WORKDIR /usr/src
@@ -481,7 +481,7 @@ doing a multi stage build for your application::
    This could lead to breakage of your Python installation, or even your complete
    OS.**
 
-When you build an image with this example (assuming requests is found in Pipefile), you
+When you build an image with this example (assuming requests is found in Pipfile), you
 will see that ``requests`` is installed in the ``runtime`` image::
 
   $ sudo docker build --no-cache -t oz/123:0.1 .
